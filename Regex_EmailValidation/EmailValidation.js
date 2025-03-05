@@ -1,3 +1,17 @@
+//UC-03 - RegexEmailValidation (@, "," & third part co is mandatory)
+function validateEmail(email) {
+  let emailRegex = /^abc@bridgelabz\.co$/;
+  return emailRegex.test(email);
+}
+
+// Test cases
+console.log(validateEmail("abc@bridgelabz.co"));   
+console.log(validateEmail("abc@xyz.co"));          
+console.log(validateEmail("abc@bridgelabzco"));    
+console.log("\n");     
+
+
+
 //UC-02 - RegexEmailValidation(@ is mandatory & valid domain part)
 function validateEmailUC2(email) {
   let emailRegex = /^abc@bridgelabz\.[a-zA-Z]+$/;
