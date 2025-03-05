@@ -1,13 +1,26 @@
+//UC-04 - Optional part like xyz with valid special characters before it
+function validateEmailUC4(email) {
+  let emailRegex = /^abc([._+-]xyz)?@bridgelabz\.co(\.in)?$/;
+  return emailRegex.test(email);
+}
+
+// Test cases
+console.log(validateEmailUC4("abc@bridgelabz.co"));         
+console.log(validateEmailUC4("abc.xyz@bridgelabz.co"));     
+console.log(validateEmailUC4("abcxyz@bridgelabz.co"));       
+console.log("\n");  
+
+
 //UC-03 - RegexEmailValidation (@, "," & third part co is mandatory)
-function validateEmail(email) {
+function validateEmailUC3(email) {
   let emailRegex = /^abc@bridgelabz\.co$/;
   return emailRegex.test(email);
 }
 
 // Test cases
-console.log(validateEmail("abc@bridgelabz.co"));   
-console.log(validateEmail("abc@xyz.co"));          
-console.log(validateEmail("abc@bridgelabzco"));    
+console.log(validateEmailUC3("abc@bridgelabz.co"));   
+console.log(validateEmailUC3("abc@xyz.co"));          
+console.log(validateEmailUC3("abc@bridgelabzco"));    
 console.log("\n");     
 
 
