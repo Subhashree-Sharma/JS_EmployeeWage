@@ -1,3 +1,18 @@
+//UC-05 - Final regex with optional TLD of exactly two characters
+function validateEmail(email) {
+  let emailRegex = /^abc([._+-]xyz)?@bridgelabz\.co(\.[a-zA-Z]{2})?$/;
+  return emailRegex.test(email);
+}
+
+// Test cases
+console.log(validateEmail("abc@bridgelabz.co"));         
+console.log(validateEmail("abc@bridgelabz.co.in"));     
+console.log(validateEmail("abc.xyz@bridgelabz.co.us"));  
+console.log(validateEmail("abc@bridgelabz.co.uk"));     
+console.log(validateEmail("abcxyz@bridgelabz.co"));    
+console.log("\n");  
+
+
 //UC-04 - Optional part like xyz with valid special characters before it
 function validateEmailUC4(email) {
   let emailRegex = /^abc([._+-]xyz)?@bridgelabz\.co(\.in)?$/;
