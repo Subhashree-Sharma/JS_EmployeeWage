@@ -1,3 +1,15 @@
+//UC-04 - Make sure 400 088 is also valid along with 400088
+function validatePinCodeUC4(pin) {
+  let pinRegex = /^[1-9][0-9]{2}\s?[0-9]{3}$/;
+  return pinRegex.test(pin);
+}
+
+// Test cases
+console.log(validatePinCodeUC4("400088"));   
+console.log(validatePinCodeUC4("400 088"));  
+console.log(validatePinCodeUC4("400  088")); 
+console.log("\n");
+
 //UC-03 - No extra characters (like alphabets or special characters) at the end
 function validatePinCodeUC3(pin) {
   let pinRegex = /^[1-9][0-9]{5}$/;
